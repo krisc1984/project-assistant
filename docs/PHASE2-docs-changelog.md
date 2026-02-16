@@ -1,0 +1,10 @@
+- Phase 2 Changelog
+- Implemented migrations runner with dry-run and idempotence (2c-01)
+- Added migrate_status.js for status reports (2c-02)
+- Created new migrations: 20260225/26/27 (2c-03)
+- Added tests scaffolding for migrations, health persistence, and reports (2d)
+- CI workflow for Phase 2 (2d-04)
+- Implemented migrations runner with dry-run and idempotence (2c-01)
+- Added migrate_status.js for status reports (2c-02)
+- Created new migrations: 20260225/26/27
+- Added tests scaffolding for migrations, health persistence, and reports (2d)

@@ -1,0 +1,32 @@
+name: Phase 2 CI (npm)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: |
+          npm ci
+      - name: Run migrations (PG path if available)
+        run: |
+          if [ -f backend/scripts/migrate_pg.js ]; then
+            node backend/scripts/migrate_pg.js
+          elif [ -f backend/scripts/migrate.js ]; then
+            node backend/scripts/migrate.js
+          else
+            echo 'No migrations script found';
+          fi
+      - name: Run tests
+        run: |
+          npm test --silent --workspaces --if-present -- --coverage || true

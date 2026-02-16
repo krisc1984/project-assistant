@@ -1,0 +1,19 @@
+:root {
+  --bg: #0b1620;
+  --surface: #0f1a2b;
+  --card: #132033;
+  --text: #e8f0fb;
+  --muted: #9fb4d4;
+  --primary: #4c6ce6;
+  --accent: #ffd36e;
+}
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial; background: var(--bg); color: var(--text); }
+.ant-layout { background: var(--bg); }
+.login-page { display: grid; place-items: center; height: 100vh; }
+.login-card { width: 420px; background: rgba(20,30,60,0.9); border-radius: 12px; padding: 16px; }
+.dashboard-grid .stat-card { background: rgba(18, 32, 66, 0.8); }
+.stat-value { font-size: 28px; font-weight: 700; }
+
+/* Light theme variant (optional) */
+.theme-light { --bg: #f5f7fb; --text: #1f1f1f; }

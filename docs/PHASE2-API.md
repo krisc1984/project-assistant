@@ -1,0 +1,22 @@
+Phase 2 API Overview (Extended)
+- Health Score
+  - GET /api/projects/{projectId}/scores
+  - POST /api/projects/{projectId}/scores
+  - PUT /api/projects/{projectId}/{scoreId}
+- Logs
+  - GET /api/projects/{projectId}/logs?limit=&offset=&checkpointId=&action=&from=&to&minScore=&maxScore
+  - POST /api/projects/{projectId}/logs
+- Reports
+  - GET /api/reports/templates
+  - GET /api/reports/templates/health.csv
+  - GET /api/reports/health-report.pdf
+- Migrations
+  - npm run migrate executes SQL migrations in migrations/ with idempotent checks
+ - Tests
+- Tests
+ - Tests
+  - Backend tests cover 2a/2b, logs and migrations
+  - 2d: additional end-to-end test suites
+  - 2e: reports templates exports
+  - 2d: additional end-to-end test suites
+  - 2e: reports templates exports

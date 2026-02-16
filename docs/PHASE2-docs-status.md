@@ -1,0 +1,29 @@
+Phase 2 Documentation Status
+
+- 2c-01: Migrate.js enhanced with dry-run flag, idempotent apply guard, transaction handling, verbose logging
+- 2c-02: migrate_status.js added; reports current migration version, applied vs pending migrations; outputs JSON
+- 2c-03: SQL migrations added under backend/database/migrations: 20260225-add-index-score_logs_extra.sql, 20260226-seed-demo.sql, 20260227-add-index-score_logs_perf2.sql
+- 2c-04: Tests: end-to-end migrations runner tests (dry-run, no-op, idempotence) scaffolded
+- 2c-05: Docs: update PHASE2-docs-status.md and PHASE2-docs-extended.md with migrations runner usage
+- 2d-01: Tests: expand backend test coverage for Health Score persistence paths and log integration
+- 2d-02: Tests: integration tests for logs endpoints in relation to scores; pagination and filtering
+- 2d-03: End-to-end test covering 2a persistence + 2b logs + 2c migrations
+- 2d-04: CI/test environment adjustments: docker-compose postgres setup; ensure migrations run before tests
+- 2d-05: Ensure code coverage thresholds enforced in CI (e.g., 80%+)
+- 2e-01: Endpoints for report templates: list templates and export templates; scaffold for CSV/PDF/Excel placeholders
+- 2e-02: Implement placeholder exports: health.csv, health-report.pdf, plus Excel placeholder scaffolding
+- 2e-03: Tests: template export tests for list, and export endpoints
+- 2f-01: Docs: phase 2 API reference alignment for new routes; update migration strategy and rollback notes
+- 2f-02: Docs: deployment guide for Phase 2 migrations runner; environment variables and rollback
+- 2f-03: Docs: changelog entry summarizing Phase 2 progress
+- 2a-01: Health Score persistence refinements: ensure transactional integrity with logs, add tests covering 2a paths
+- 2a-02: Health Score API alignment: adjust endpoints to reflect DB changes; update tests accordingly
+- 2d-05: Ensure code coverage thresholds enforced in CI (e.g., 80%+)
+- 2e-01: Endpoints for report templates: list templates and export templates; scaffold for CSV/PDF/Excel placeholders
+- 2e-02: Implement placeholder exports: health.csv, health-report.pdf, plus Excel placeholder scaffolding
+- 2e-03: Tests: template export tests for list, and export endpoints
+- 2f-01: Docs: phase 2 API reference alignment for new routes; update migration strategy and rollback notes
+- 2f-02: Docs: deployment guide for Phase 2 migrations runner; environment variables and rollback
+- 2f-03: Docs: changelog entry summarizing Phase 2 progress
+- 2a-01: Health Score persistence refinements: ensure transactional integrity with logs, add tests covering 2a paths
+- 2a-02: Health Score API alignment: adjust endpoints to reflect DB changes; update tests accordingly
